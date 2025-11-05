@@ -16,11 +16,10 @@ public class SharedData
 	private boolean flag;
 	private final int b;
 	
-	/**
-	 * This is the the class constructor setting array and target number data
-	 * @param array
-	 * @param b
-	 */
+	/**This is the the class constructor setting array and target number data
+	 * @param array - original array
+	 * @param b - target number
+	 */ 
 	public SharedData(ArrayList<Integer> array, int b) {
 		
 		this.array = array;
@@ -28,8 +27,8 @@ public class SharedData
 	}
 
 	/**
-	 * this function returns the win array
-	 * @return
+	 * getter
+	 * @return win array
 	 */
 	public boolean[] getWinArray() 
 	{
@@ -45,8 +44,8 @@ public class SharedData
 		this.winArray = winArray;
 	}
 
-	/**This getter returns the main array
-	 * @return
+	/**This is a getter
+	 * @return original array
 	 */
 	public ArrayList<Integer> getArray() 
 	{
@@ -54,8 +53,8 @@ public class SharedData
 	}
 
 	/**
-	 * returns the target number
-	 * @return
+	 * This is a getter
+	 * @return target number
 	 */
 	public int getB() 
 	{
@@ -64,8 +63,7 @@ public class SharedData
 
 	/**
 	 * getter for flag
-	 * returns the flag that indicates if number found
-	 * @return
+	 * @return Flag that indicates if number found
 	 */
 	public boolean getFlag() 
 	{
@@ -73,8 +71,8 @@ public class SharedData
 	}
 
 	/**
-	 * setter for flag updating its value if target found
-	 * @param flag
+	 * This is a setter
+	 * @param flag -   Updating its value if target found
 	 */
 	public void setFlag(boolean flag) {
 		this.flag = flag;
