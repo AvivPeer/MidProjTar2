@@ -1,21 +1,40 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
+/**
+ * This class uses Two Threads to search for data
+ * Both Threads share the data between them using arrayList numArray
+ * 
+ * 	@author [Aviv Peer]
+ * 
+ */
 public class TestThreadCheckArray {
+	
+	/**
+	 * User is asked to enter an array size
+	 * User input stored in numArray with the size num
+	 * User is asked for a number to search
+	 * Target number and the number arrayList creates ShareData object
+	 * Two thread created and run to search for target number
+	 * Prints the solution found
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
 			Thread thread1, thread2;
 			System.out.println("Enter array size");
 			int num  = input.nextInt();
-			int [] array = new int[num];
+			ArrayList<Integer> numArray= new ArrayList<>();
 			System.out.println("Enter numbers for array");
 			
 			for (int index = 0; index < num; index++) 
-				array[index] = input.nextInt();
+				numArray.add(input.nextInt());
 			
 			System.out.println("Enter number");
 			num = input.nextInt();
 			
-			SharedData sd = new SharedData(array, num);
+			SharedData sd = new SharedData(numArray, num);
 			
 			thread1 = new Thread(new ThreadCheckArray(sd), "thread1");
 			thread2 = new Thread(new ThreadCheckArray(sd), "thread2");
